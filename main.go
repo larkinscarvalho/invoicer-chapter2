@@ -62,7 +62,7 @@ func main() {
 	iv.db = db
 	iv.db.AutoMigrate(&Invoice{}, &Charge{})
 
-	// register routes
+	// register routes 
 	r := mux.NewRouter()
 	r.HandleFunc("/", iv.getIndex).Methods("GET")
 	r.HandleFunc("/__heartbeat__", getHeartbeat).Methods("GET")
